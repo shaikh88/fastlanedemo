@@ -1,0 +1,8 @@
+workspace "AnyApp.xcodeproj/project.xcworkspace"
+scheme "AnyApp"
+sdk "iphonesimulator"
+device "iphone 11"
+code_coverage true
+xcargs "-parallelsizeTargets"
+prelaunch_simulator true
+derived_data_path "Build/"
