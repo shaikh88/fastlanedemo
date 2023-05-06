@@ -39,3 +39,7 @@ jobs:
             Build/Build/Products
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('BUILDsolid.xcodeproj/project.xcode')}}
           restore-keys: ${{ runner.os }}-deps-v1-
+      
+      - name: Run Tests
+        run: bundle exec fastlane unit_test
+      
