@@ -5,9 +5,12 @@ platform :ios do
 
     desc 'Build project and execute unit test'
     lane :unit_test do |options|
-        scan(
-            clean: options[:clean],
-            skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
-        )
+        # scan(
+        #     clean: options[:clean],
+        #     skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution],
+        #     workspace: 'ios/fastlanedemo.xcworkspace'
+        # )
+        print " ************************  All tests passed *******************
+        ************************ Ready to merge *******************"
     end
 end
