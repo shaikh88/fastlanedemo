@@ -23,6 +23,22 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Build project and execute unit test
 
+### ios deploy_to_app_store
+
+```sh
+[bundle exec] fastlane ios deploy_to_app_store
+```
+
+Deploy the app to the App Store
+
+### ios generate_certificates
+
+```sh
+[bundle exec] fastlane ios generate_certificates
+```
+
+Generate and store certificates using Match
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

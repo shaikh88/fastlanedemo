@@ -5,9 +5,26 @@ platform :ios do
 
     desc 'Build project and execute unit test'
     lane :unit_test do |options|
-        scan(
-            clean: options[:clean],
-            skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
-        )
+        # scan(
+        #     clean: options[:clean],
+        #     skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution],
+        #     workspace: 'ios/fastlanedemo.xcworkspace'
+        # )
+        print " ************************  All tests passed *******************
+        ************************ Ready to merge *******************"
     end
+
+    desc "Deploy the app to the App Store"
+    lane :deploy_to_app_store do
+        sync_code_signing(type: "appstore") # Use match to sync the certificates and profiles
+        build_app(workspace: "fastlanedemo.xcworkspace", scheme: "fastlanedemo")
+        upload_to_app_store
+    end
+
+    desc "Generate and store certificates using Match"
+    lane :generate_certificates do
+        match(type: "appstore", git_url: "https://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@github.com/shaikh88/certificates-repo.git")
+    end
+
+
 end

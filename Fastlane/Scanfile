@@ -1,5 +1,5 @@
-workspace "AnyApp.xcodeproj/project.xcworkspace"
-scheme "AnyApp"
+workspace "ios/fastlanedemo.xcodeproj/project.xcworkspace"
+scheme "fastlanedemo"
 sdk "iphonesimulator"
 device "iphone 11"
 code_coverage true
